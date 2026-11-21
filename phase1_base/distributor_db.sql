@@ -1,0 +1,763 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict eb3Ht7I9B9qRaVocVIqzXJFghfByYtF0Ncnlefa5c1BOiWp3GRbQVehT18BfwEk
+
+-- Dumped from database version 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1)
+-- Dumped by pg_dump version 18.6 (Ubuntu 18.6-0ubuntu0.26.04.1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: distributors; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.distributors (
+    distributor_id integer NOT NULL,
+    distributor_name character varying(150) NOT NULL,
+    license_number character varying(50) NOT NULL,
+    address text,
+    contact_number character varying(20)
+);
+
+
+ALTER TABLE public.distributors OWNER TO postgres;
+
+--
+-- Name: distributors_distributor_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.distributors_distributor_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE public.distributors_distributor_id_seq OWNER TO postgres;
+
+--
+-- Name: distributors_distributor_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.distributors_distributor_id_seq OWNED BY public.distributors.distributor_id;
+
+
+--
+-- Name: inventory_items; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.inventory_items (
+    inventory_id integer NOT NULL,
+    distributor_id integer NOT NULL,
+    product_code character varying(50) NOT NULL,
+    received_date date NOT NULL
+);
+
+
+ALTER TABLE public.inventory_items OWNER TO postgres;
+
+--
+-- Name: inventory_items_inventory_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.inventory_items_inventory_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE public.inventory_items_inventory_id_seq OWNER TO postgres;
+
+--
+-- Name: inventory_items_inventory_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.inventory_items_inventory_id_seq OWNED BY public.inventory_items.inventory_id;
+
+
+--
+-- Name: supplied_items; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.supplied_items (
+    supply_item_id integer NOT NULL,
+    product_code character varying(50) NOT NULL,
+    vendor_reference character varying(150) NOT NULL,
+    supply_date date NOT NULL
+);
+
+
+ALTER TABLE public.supplied_items OWNER TO postgres;
+
+--
+-- Name: supplied_items_supply_item_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.supplied_items_supply_item_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE public.supplied_items_supply_item_id_seq OWNER TO postgres;
+
+--
+-- Name: supplied_items_supply_item_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.supplied_items_supply_item_id_seq OWNED BY public.supplied_items.supply_item_id;
+
+
+--
+-- Name: distributors distributor_id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.distributors ALTER COLUMN distributor_id SET DEFAULT nextval('public.distributors_distributor_id_seq'::regclass);
+
+
+--
+-- Name: inventory_items inventory_id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.inventory_items ALTER COLUMN inventory_id SET DEFAULT nextval('public.inventory_items_inventory_id_seq'::regclass);
+
+
+--
+-- Name: supplied_items supply_item_id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.supplied_items ALTER COLUMN supply_item_id SET DEFAULT nextval('public.supplied_items_supply_item_id_seq'::regclass);
+
+
+--
+-- Data for Name: distributors; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.distributors (distributor_id, distributor_name, license_number, address, contact_number) FROM stdin;
+1	Delhi Pharma Distributors	DL-DIST-001	Karol Bagh, New Delhi	9810000001
+2	MedSupply India	DL-DIST-002	Lajpat Nagar, New Delhi	9810000002
+3	HealthRoute Distributors	DL-DIST-003	Dwarka, New Delhi	9810000003
+4	PrimeMed Distributors	DL-DIST-004	Rohini, New Delhi	9810000004
+5	LifeCare Supply Network	DL-DIST-005	Saket, New Delhi	9810000005
+\.
+
+
+--
+-- Data for Name: inventory_items; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.inventory_items (inventory_id, distributor_id, product_code, received_date) FROM stdin;
+1	1	ITEM000001	2026-08-20
+2	1	ITEM000002	2026-08-20
+3	1	ITEM000004	2026-08-20
+4	1	ITEM000005	2026-08-20
+5	1	ITEM000006	2026-08-20
+6	1	ITEM000007	2026-08-20
+7	1	ITEM000008	2026-08-20
+8	1	ITEM000009	2026-08-20
+9	1	ITEM000010	2026-08-20
+10	1	ITEM000011	2026-08-20
+11	1	ITEM000012	2026-08-20
+12	1	ITEM000013	2026-08-20
+13	1	ITEM000014	2026-08-20
+14	1	ITEM000015	2026-08-20
+15	1	ITEM000016	2026-08-20
+16	1	ITEM000017	2026-08-20
+17	1	ITEM000018	2026-08-20
+18	1	ITEM000019	2026-08-20
+19	1	ITEM000020	2026-08-20
+20	1	ITEM000021	2026-08-20
+21	1	ITEM000022	2026-08-20
+22	1	ITEM000023	2026-08-20
+23	1	ITEM000024	2026-08-20
+24	1	ITEM000025	2026-08-20
+25	1	ITEM000026	2026-08-20
+26	1	ITEM000027	2026-08-20
+27	1	ITEM000028	2026-08-20
+28	1	ITEM000029	2026-08-20
+29	1	ITEM000030	2026-08-20
+30	1	ITEM000031	2026-08-20
+31	1	ITEM000032	2026-08-20
+32	1	ITEM000033	2026-08-20
+33	1	ITEM000034	2026-08-20
+34	1	ITEM000035	2026-08-20
+35	1	ITEM000036	2026-08-20
+36	1	ITEM000037	2026-08-20
+37	1	ITEM000038	2026-08-20
+38	1	ITEM000039	2026-08-20
+39	1	ITEM000040	2026-08-20
+40	1	ITEM000041	2026-08-20
+41	1	ITEM000042	2026-08-20
+42	1	ITEM000043	2026-08-20
+43	1	ITEM000044	2026-08-20
+44	1	ITEM000045	2026-08-20
+45	1	ITEM000046	2026-08-20
+46	1	ITEM000047	2026-08-20
+47	1	ITEM000048	2026-08-20
+48	1	ITEM000049	2026-08-20
+49	1	ITEM000051	2026-08-20
+50	1	ITEM000052	2026-08-20
+51	1	ITEM000053	2026-08-20
+52	1	ITEM000054	2026-08-20
+53	1	ITEM000055	2026-08-20
+54	1	ITEM000056	2026-08-20
+55	1	ITEM000057	2026-08-20
+56	1	ITEM000058	2026-08-20
+57	1	ITEM000059	2026-08-20
+58	1	ITEM000060	2026-08-20
+59	2	ITEM000061	2026-08-22
+60	2	ITEM000062	2026-08-22
+61	2	ITEM000063	2026-08-22
+62	2	ITEM000064	2026-08-22
+63	2	ITEM000065	2026-08-22
+64	2	ITEM000066	2026-08-22
+65	2	ITEM000067	2026-08-22
+66	2	ITEM000068	2026-08-22
+67	2	ITEM000069	2026-08-22
+68	2	ITEM000070	2026-08-22
+69	2	ITEM000071	2026-08-22
+70	2	ITEM000072	2026-08-22
+71	2	ITEM000073	2026-08-22
+72	2	ITEM000074	2026-08-22
+73	2	ITEM000075	2026-08-22
+74	2	ITEM000076	2026-08-22
+75	2	ITEM000077	2026-08-22
+76	2	ITEM000078	2026-08-22
+77	2	ITEM000079	2026-08-22
+78	2	ITEM000080	2026-08-22
+79	2	ITEM000081	2026-08-22
+80	2	ITEM000082	2026-08-22
+81	2	ITEM000083	2026-08-22
+82	2	ITEM000084	2026-08-22
+83	2	ITEM000085	2026-08-22
+84	2	ITEM000086	2026-08-22
+85	2	ITEM000087	2026-08-22
+86	2	ITEM000089	2026-08-22
+87	2	ITEM000090	2026-08-22
+88	2	ITEM000091	2026-08-22
+89	2	ITEM000092	2026-08-22
+90	2	ITEM000093	2026-08-22
+91	2	ITEM000094	2026-08-22
+92	2	ITEM000096	2026-08-22
+93	2	ITEM000098	2026-08-22
+94	2	ITEM000100	2026-08-22
+95	2	ITEM000101	2026-08-22
+96	2	ITEM000103	2026-08-22
+97	2	ITEM000104	2026-08-22
+98	2	ITEM000105	2026-08-22
+99	2	ITEM000106	2026-08-22
+100	2	ITEM000107	2026-08-22
+101	2	ITEM000108	2026-08-22
+102	2	ITEM000109	2026-08-22
+103	2	ITEM000110	2026-08-22
+104	2	ITEM000111	2026-08-22
+105	2	ITEM000112	2026-08-22
+106	2	ITEM000113	2026-08-22
+107	2	ITEM000114	2026-08-22
+108	2	ITEM000115	2026-08-22
+109	2	ITEM000116	2026-08-22
+110	2	ITEM000117	2026-08-22
+111	2	ITEM000118	2026-08-22
+112	2	ITEM000119	2026-08-22
+113	2	ITEM000120	2026-08-22
+114	3	ITEM000121	2026-08-25
+115	3	ITEM000122	2026-08-25
+116	3	ITEM000123	2026-08-25
+117	3	ITEM000124	2026-08-25
+118	3	ITEM000125	2026-08-25
+119	3	ITEM000126	2026-08-25
+120	3	ITEM000127	2026-08-25
+121	3	ITEM000128	2026-08-25
+122	3	ITEM000129	2026-08-25
+123	3	ITEM000130	2026-08-25
+124	3	ITEM000131	2026-08-25
+125	3	ITEM000132	2026-08-25
+126	3	ITEM000133	2026-08-25
+127	3	ITEM000134	2026-08-25
+128	3	ITEM000136	2026-08-25
+129	3	ITEM000137	2026-08-25
+130	3	ITEM000138	2026-08-25
+131	3	ITEM000139	2026-08-25
+132	3	ITEM000140	2026-08-25
+133	3	ITEM000141	2026-08-25
+134	3	ITEM000142	2026-08-25
+135	3	ITEM000143	2026-08-25
+136	3	ITEM000145	2026-08-25
+137	3	ITEM000147	2026-08-25
+138	3	ITEM000148	2026-08-25
+139	3	ITEM000149	2026-08-25
+140	3	ITEM000150	2026-08-25
+141	3	ITEM000151	2026-08-25
+142	3	ITEM000152	2026-08-25
+143	3	ITEM000153	2026-08-25
+144	3	ITEM000154	2026-08-25
+145	3	ITEM000155	2026-08-25
+146	3	ITEM000156	2026-08-25
+147	3	ITEM000157	2026-08-25
+148	3	ITEM000158	2026-08-25
+149	3	ITEM000159	2026-08-25
+150	3	ITEM000160	2026-08-25
+151	3	ITEM000161	2026-08-25
+152	3	ITEM000162	2026-08-25
+153	3	ITEM000163	2026-08-25
+154	3	ITEM000164	2026-08-25
+155	3	ITEM000165	2026-08-25
+156	3	ITEM000166	2026-08-25
+157	3	ITEM000167	2026-08-25
+158	3	ITEM000168	2026-08-25
+159	3	ITEM000169	2026-08-25
+160	3	ITEM000171	2026-08-25
+161	3	ITEM000172	2026-08-25
+162	3	ITEM000173	2026-08-25
+163	3	ITEM000174	2026-08-25
+164	3	ITEM000175	2026-08-25
+165	3	ITEM000176	2026-08-25
+166	3	ITEM000177	2026-08-25
+167	3	ITEM000178	2026-08-25
+168	3	ITEM000179	2026-08-25
+169	3	ITEM000180	2026-08-25
+170	4	ITEM000181	2026-08-28
+171	4	ITEM000182	2026-08-28
+172	4	ITEM000183	2026-08-28
+173	4	ITEM000184	2026-08-28
+174	4	ITEM000185	2026-08-28
+175	4	ITEM000187	2026-08-28
+176	4	ITEM000188	2026-08-28
+177	4	ITEM000189	2026-08-28
+178	4	ITEM000190	2026-08-28
+179	4	ITEM000192	2026-08-28
+180	4	ITEM000193	2026-08-28
+181	4	ITEM000194	2026-08-28
+182	4	ITEM000195	2026-08-28
+183	4	ITEM000196	2026-08-28
+184	4	ITEM000197	2026-08-28
+185	4	ITEM000198	2026-08-28
+186	4	ITEM000199	2026-08-28
+187	4	ITEM000200	2026-08-28
+188	4	ITEM000201	2026-08-28
+189	4	ITEM000202	2026-08-28
+190	4	ITEM000203	2026-08-28
+191	4	ITEM000205	2026-08-28
+192	4	ITEM000206	2026-08-28
+193	4	ITEM000208	2026-08-28
+194	4	ITEM000209	2026-08-28
+195	4	ITEM000210	2026-08-28
+196	4	ITEM000211	2026-08-28
+197	4	ITEM000212	2026-08-28
+198	4	ITEM000213	2026-08-28
+199	4	ITEM000214	2026-08-28
+200	4	ITEM000215	2026-08-28
+201	4	ITEM000216	2026-08-28
+202	4	ITEM000217	2026-08-28
+203	4	ITEM000218	2026-08-28
+204	4	ITEM000219	2026-08-28
+205	4	ITEM000220	2026-08-28
+206	4	ITEM000221	2026-08-28
+207	4	ITEM000222	2026-08-28
+208	4	ITEM000223	2026-08-28
+209	4	ITEM000224	2026-08-28
+210	4	ITEM000225	2026-08-28
+211	4	ITEM000226	2026-08-28
+212	4	ITEM000227	2026-08-28
+213	4	ITEM000228	2026-08-28
+214	4	ITEM000229	2026-08-28
+215	4	ITEM000230	2026-08-28
+216	4	ITEM000231	2026-08-28
+217	4	ITEM000232	2026-08-28
+218	4	ITEM000233	2026-08-28
+219	4	ITEM000234	2026-08-28
+220	4	ITEM000235	2026-08-28
+221	4	ITEM000236	2026-08-28
+222	4	ITEM000237	2026-08-28
+223	4	ITEM000238	2026-08-28
+224	4	ITEM000239	2026-08-28
+225	4	ITEM000240	2026-08-28
+226	5	ITEM000241	2026-08-31
+227	5	ITEM000242	2026-08-31
+228	5	ITEM000243	2026-08-31
+229	5	ITEM000244	2026-08-31
+230	5	ITEM000245	2026-08-31
+231	5	ITEM000246	2026-08-31
+232	5	ITEM000247	2026-08-31
+233	5	ITEM000248	2026-08-31
+234	5	ITEM000249	2026-08-31
+235	5	ITEM000250	2026-08-31
+236	5	ITEM000251	2026-08-31
+237	5	ITEM000252	2026-08-31
+238	5	ITEM000253	2026-08-31
+239	5	ITEM000254	2026-08-31
+240	5	ITEM000255	2026-08-31
+241	5	ITEM000256	2026-08-31
+242	5	ITEM000257	2026-08-31
+243	5	ITEM000258	2026-08-31
+244	5	ITEM000259	2026-08-31
+245	5	ITEM000260	2026-08-31
+246	5	ITEM000261	2026-08-31
+247	5	ITEM000262	2026-08-31
+248	5	ITEM000264	2026-08-31
+249	5	ITEM000265	2026-08-31
+250	5	ITEM000266	2026-08-31
+251	5	ITEM000267	2026-08-31
+252	5	ITEM000268	2026-08-31
+253	5	ITEM000269	2026-08-31
+254	5	ITEM000270	2026-08-31
+255	5	ITEM000271	2026-08-31
+256	5	ITEM000272	2026-08-31
+257	5	ITEM000273	2026-08-31
+258	5	ITEM000274	2026-08-31
+259	5	ITEM000275	2026-08-31
+260	5	ITEM000276	2026-08-31
+261	5	ITEM000277	2026-08-31
+262	5	ITEM000278	2026-08-31
+263	5	ITEM000279	2026-08-31
+264	5	ITEM000280	2026-08-31
+265	5	ITEM000282	2026-08-31
+266	5	ITEM000283	2026-08-31
+267	5	ITEM000285	2026-08-31
+268	5	ITEM000286	2026-08-31
+269	5	ITEM000288	2026-08-31
+270	5	ITEM000289	2026-08-31
+271	5	ITEM000290	2026-08-31
+272	5	ITEM000291	2026-08-31
+273	5	ITEM000292	2026-08-31
+274	5	ITEM000293	2026-08-31
+275	5	ITEM000294	2026-08-31
+276	5	ITEM000295	2026-08-31
+277	5	ITEM000296	2026-08-31
+278	5	ITEM000298	2026-08-31
+279	5	ITEM000299	2026-08-31
+280	5	ITEM000300	2026-08-31
+284	3	WXY	2026-09-16
+\.
+
+
+--
+-- Data for Name: supplied_items; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.supplied_items (supply_item_id, product_code, vendor_reference, supply_date) FROM stdin;
+1	ITEM000208	CityCare Medical Store	2026-09-01
+2	ITEM000225	CityCare Medical Store	2026-09-01
+3	ITEM000117	CityCare Medical Store	2026-09-01
+4	ITEM000030	CityCare Medical Store	2026-09-01
+5	ITEM000274	CityCare Medical Store	2026-09-01
+6	ITEM000094	CityCare Medical Store	2026-09-01
+7	ITEM000085	CityCare Medical Store	2026-09-01
+8	ITEM000266	CityCare Medical Store	2026-09-01
+9	ITEM000278	CityCare Medical Store	2026-09-01
+10	ITEM000199	CityCare Medical Store	2026-09-01
+11	ITEM000105	CityCare Medical Store	2026-09-01
+12	ITEM000269	CityCare Medical Store	2026-09-01
+13	ITEM000048	CityCare Medical Store	2026-09-01
+14	ITEM000112	CityCare Medical Store	2026-09-01
+15	ITEM000166	CityCare Medical Store	2026-09-01
+16	ITEM000023	CityCare Medical Store	2026-09-01
+17	ITEM000010	CityCare Medical Store	2026-09-01
+18	ITEM000098	CityCare Medical Store	2026-09-01
+19	ITEM000159	CityCare Medical Store	2026-09-01
+20	ITEM000130	CityCare Medical Store	2026-09-01
+21	ITEM000145	CityCare Medical Store	2026-09-01
+22	ITEM000071	CityCare Medical Store	2026-09-01
+23	ITEM000165	CityCare Medical Store	2026-09-01
+24	ITEM000235	CityCare Medical Store	2026-09-01
+25	ITEM000012	CityCare Medical Store	2026-09-01
+26	ITEM000081	CityCare Medical Store	2026-09-01
+27	ITEM000192	CityCare Medical Store	2026-09-01
+28	ITEM000001	CityCare Medical Store	2026-09-01
+29	ITEM000017	CityCare Medical Store	2026-09-01
+30	ITEM000033	CityCare Medical Store	2026-09-02
+31	ITEM000083	CityCare Medical Store	2026-09-02
+32	ITEM000153	CityCare Medical Store	2026-09-02
+33	ITEM000233	CityCare Medical Store	2026-09-02
+34	ITEM000169	CityCare Medical Store	2026-09-02
+35	ITEM000265	CityCare Medical Store	2026-09-02
+36	ITEM000024	CityCare Medical Store	2026-09-02
+37	ITEM000168	CityCare Medical Store	2026-09-02
+38	ITEM000005	CityCare Medical Store	2026-09-02
+39	ITEM000143	CityCare Medical Store	2026-09-02
+40	ITEM000057	CityCare Medical Store	2026-09-02
+41	ITEM000291	CityCare Medical Store	2026-09-02
+42	ITEM000187	CityCare Medical Store	2026-09-02
+43	ITEM000283	CityCare Medical Store	2026-09-02
+44	ITEM000282	CityCare Medical Store	2026-09-02
+45	ITEM000229	CityCare Medical Store	2026-09-02
+46	ITEM000016	CityCare Medical Store	2026-09-02
+47	ITEM000255	CityCare Medical Store	2026-09-02
+48	ITEM000222	CityCare Medical Store	2026-09-02
+49	ITEM000065	CityCare Medical Store	2026-09-02
+50	ITEM000241	CityCare Medical Store	2026-09-02
+51	ITEM000128	CityCare Medical Store	2026-09-02
+52	ITEM000044	CityCare Medical Store	2026-09-02
+53	ITEM000077	CityCare Medical Store	2026-09-02
+54	ITEM000134	CityCare Medical Store	2026-09-02
+55	ITEM000167	CityCare Medical Store	2026-09-02
+56	ITEM000252	CityCare Medical Store	2026-09-02
+57	ITEM000132	CityCare Medical Store	2026-09-02
+58	ITEM000084	Apollo Health Point	2026-09-03
+59	ITEM000139	Apollo Health Point	2026-09-03
+60	ITEM000129	Apollo Health Point	2026-09-03
+61	ITEM000040	Apollo Health Point	2026-09-03
+62	ITEM000086	Apollo Health Point	2026-09-03
+63	ITEM000069	Apollo Health Point	2026-09-03
+64	ITEM000294	Apollo Health Point	2026-09-03
+65	ITEM000009	Apollo Health Point	2026-09-03
+66	ITEM000161	Apollo Health Point	2026-09-03
+67	ITEM000202	Apollo Health Point	2026-09-03
+68	ITEM000251	Apollo Health Point	2026-09-03
+69	ITEM000190	Apollo Health Point	2026-09-03
+70	ITEM000022	Apollo Health Point	2026-09-03
+71	ITEM000248	Apollo Health Point	2026-09-03
+72	ITEM000140	Apollo Health Point	2026-09-03
+73	ITEM000042	Apollo Health Point	2026-09-03
+74	ITEM000180	Apollo Health Point	2026-09-03
+75	ITEM000293	Apollo Health Point	2026-09-03
+76	ITEM000104	Apollo Health Point	2026-09-03
+77	ITEM000237	Apollo Health Point	2026-09-03
+78	ITEM000290	Apollo Health Point	2026-09-03
+79	ITEM000055	Apollo Health Point	2026-09-03
+80	ITEM000249	Apollo Health Point	2026-09-03
+81	ITEM000179	Apollo Health Point	2026-09-03
+82	ITEM000189	Apollo Health Point	2026-09-03
+83	ITEM000052	Apollo Health Point	2026-09-03
+84	ITEM000245	Apollo Health Point	2026-09-04
+85	ITEM000197	Apollo Health Point	2026-09-04
+86	ITEM000210	Apollo Health Point	2026-09-04
+87	ITEM000221	Apollo Health Point	2026-09-04
+88	ITEM000273	Apollo Health Point	2026-09-04
+89	ITEM000008	Apollo Health Point	2026-09-04
+90	ITEM000298	Apollo Health Point	2026-09-04
+91	ITEM000025	Apollo Health Point	2026-09-04
+92	ITEM000124	Apollo Health Point	2026-09-04
+93	ITEM000078	Apollo Health Point	2026-09-04
+94	ITEM000004	Apollo Health Point	2026-09-04
+95	ITEM000236	Apollo Health Point	2026-09-04
+96	ITEM000047	Apollo Health Point	2026-09-04
+97	ITEM000154	Apollo Health Point	2026-09-04
+98	ITEM000045	Apollo Health Point	2026-09-04
+99	ITEM000093	Apollo Health Point	2026-09-04
+100	ITEM000137	Apollo Health Point	2026-09-04
+101	ITEM000205	Apollo Health Point	2026-09-04
+102	ITEM000223	Apollo Health Point	2026-09-04
+103	ITEM000054	Apollo Health Point	2026-09-04
+104	ITEM000036	Apollo Health Point	2026-09-04
+105	ITEM000035	Apollo Health Point	2026-09-04
+106	ITEM000122	Apollo Health Point	2026-09-04
+107	ITEM000149	Apollo Health Point	2026-09-04
+108	ITEM000148	Apollo Health Point	2026-09-04
+109	ITEM000216	Apollo Health Point	2026-09-04
+110	ITEM000296	Apollo Health Point	2026-09-04
+111	ITEM000147	Apollo Health Point	2026-09-04
+112	ITEM000217	Apollo Health Point	2026-09-04
+113	ITEM000259	Apollo Health Point	2026-09-04
+114	ITEM000295	Apollo Health Point	2026-09-04
+115	ITEM000063	Apollo Health Point	2026-09-04
+116	ITEM000121	Apollo Health Point	2026-09-04
+117	ITEM000131	Apollo Health Point	2026-09-04
+118	ITEM000028	Apollo Health Point	2026-09-04
+119	ITEM000002	Apollo Health Point	2026-09-04
+120	ITEM000270	Wellness Pharmacy	2026-09-05
+121	ITEM000060	Wellness Pharmacy	2026-09-05
+122	ITEM000264	Wellness Pharmacy	2026-09-05
+123	ITEM000107	Wellness Pharmacy	2026-09-05
+124	ITEM000276	Wellness Pharmacy	2026-09-05
+125	ITEM000174	Wellness Pharmacy	2026-09-05
+126	ITEM000215	Wellness Pharmacy	2026-09-05
+127	ITEM000250	Wellness Pharmacy	2026-09-05
+128	ITEM000214	Wellness Pharmacy	2026-09-05
+129	ITEM000177	Wellness Pharmacy	2026-09-05
+130	ITEM000100	Wellness Pharmacy	2026-09-05
+131	ITEM000228	Wellness Pharmacy	2026-09-05
+132	ITEM000087	Wellness Pharmacy	2026-09-05
+133	ITEM000021	Wellness Pharmacy	2026-09-05
+134	ITEM000209	Wellness Pharmacy	2026-09-05
+135	ITEM000116	Wellness Pharmacy	2026-09-05
+136	ITEM000007	Wellness Pharmacy	2026-09-05
+137	ITEM000015	Wellness Pharmacy	2026-09-05
+138	ITEM000110	Wellness Pharmacy	2026-09-05
+139	ITEM000109	Wellness Pharmacy	2026-09-05
+140	ITEM000279	Wellness Pharmacy	2026-09-05
+141	ITEM000268	Wellness Pharmacy	2026-09-05
+142	ITEM000240	Wellness Pharmacy	2026-09-05
+143	ITEM000299	Wellness Pharmacy	2026-09-05
+144	ITEM000090	Wellness Pharmacy	2026-09-05
+145	ITEM000151	Wellness Pharmacy	2026-09-05
+146	ITEM000262	Wellness Pharmacy	2026-09-05
+147	ITEM000155	Wellness Pharmacy	2026-09-05
+148	ITEM000182	Wellness Pharmacy	2026-09-06
+149	ITEM000029	Wellness Pharmacy	2026-09-06
+150	ITEM000219	Wellness Pharmacy	2026-09-06
+151	ITEM000242	Wellness Pharmacy	2026-09-06
+152	ITEM000213	Wellness Pharmacy	2026-09-06
+153	ITEM000011	Wellness Pharmacy	2026-09-06
+154	ITEM000039	Wellness Pharmacy	2026-09-06
+155	ITEM000256	Wellness Pharmacy	2026-09-06
+156	ITEM000056	Wellness Pharmacy	2026-09-06
+157	ITEM000089	Wellness Pharmacy	2026-09-06
+158	ITEM000062	Wellness Pharmacy	2026-09-06
+159	ITEM000043	Wellness Pharmacy	2026-09-06
+160	ITEM000113	Wellness Pharmacy	2026-09-06
+161	ITEM000119	Wellness Pharmacy	2026-09-06
+162	ITEM000246	Wellness Pharmacy	2026-09-06
+163	ITEM000127	Wellness Pharmacy	2026-09-06
+164	ITEM000195	Wellness Pharmacy	2026-09-06
+165	ITEM000285	Wellness Pharmacy	2026-09-06
+166	ITEM000257	Wellness Pharmacy	2026-09-06
+167	ITEM000292	Wellness Pharmacy	2026-09-06
+168	ITEM000114	Wellness Pharmacy	2026-09-06
+169	ITEM000074	Wellness Pharmacy	2026-09-06
+170	ITEM000258	Wellness Pharmacy	2026-09-06
+171	ITEM000038	Wellness Pharmacy	2026-09-06
+172	ITEM000271	Wellness Pharmacy	2026-09-06
+173	ITEM000175	Wellness Pharmacy	2026-09-06
+174	ITEM000026	Wellness Pharmacy	2026-09-06
+175	ITEM000206	LifeCare Medical Store	2026-09-07
+176	ITEM000019	LifeCare Medical Store	2026-09-07
+177	ITEM000158	LifeCare Medical Store	2026-09-07
+178	ITEM000183	LifeCare Medical Store	2026-09-07
+179	ITEM000200	LifeCare Medical Store	2026-09-07
+180	ITEM000020	LifeCare Medical Store	2026-09-07
+181	ITEM000053	LifeCare Medical Store	2026-09-07
+182	ITEM000171	LifeCare Medical Store	2026-09-07
+183	ITEM000184	LifeCare Medical Store	2026-09-07
+184	ITEM000066	LifeCare Medical Store	2026-09-07
+185	ITEM000051	LifeCare Medical Store	2026-09-07
+186	ITEM000150	LifeCare Medical Store	2026-09-07
+187	ITEM000123	LifeCare Medical Store	2026-09-07
+188	ITEM000244	LifeCare Medical Store	2026-09-07
+189	ITEM000111	LifeCare Medical Store	2026-09-07
+190	ITEM000253	LifeCare Medical Store	2026-09-07
+191	ITEM000178	LifeCare Medical Store	2026-09-07
+192	ITEM000226	LifeCare Medical Store	2026-09-07
+193	ITEM000220	LifeCare Medical Store	2026-09-07
+194	ITEM000267	LifeCare Medical Store	2026-09-07
+195	ITEM000164	LifeCare Medical Store	2026-09-07
+196	ITEM000227	LifeCare Medical Store	2026-09-07
+197	ITEM000173	LifeCare Medical Store	2026-09-07
+198	ITEM000064	LifeCare Medical Store	2026-09-07
+199	ITEM000181	LifeCare Medical Store	2026-09-08
+200	ITEM000157	LifeCare Medical Store	2026-09-08
+201	ITEM000041	CityCare Medical Store	2026-09-02
+206	ITEM000046	MediTrust Pharmacy	2026-09-04
+209	ITEM000049	PrimeCare Medical Store	2026-09-05
+211	ITEM000061	Apollo Health Point	2026-09-03
+217	ITEM000067	CarePlus Pharmacy	2026-09-05
+218	ITEM000068	PrimeCare Medical Store	2026-09-06
+220	ITEM000070	CityCare Medical Store	2026-09-06
+\.
+
+
+--
+-- Name: distributors_distributor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.distributors_distributor_id_seq', 6, true);
+
+
+--
+-- Name: inventory_items_inventory_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.inventory_items_inventory_id_seq', 285, true);
+
+
+--
+-- Name: supplied_items_supply_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.supplied_items_supply_item_id_seq', 220, true);
+
+
+--
+-- Name: distributors distributors_license_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.distributors
+    ADD CONSTRAINT distributors_license_number_key UNIQUE (license_number);
+
+
+--
+-- Name: distributors distributors_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.distributors
+    ADD CONSTRAINT distributors_pkey PRIMARY KEY (distributor_id);
+
+
+--
+-- Name: inventory_items inventory_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.inventory_items
+    ADD CONSTRAINT inventory_items_pkey PRIMARY KEY (inventory_id);
+
+
+--
+-- Name: inventory_items inventory_items_product_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.inventory_items
+    ADD CONSTRAINT inventory_items_product_code_key UNIQUE (product_code);
+
+
+--
+-- Name: supplied_items supplied_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.supplied_items
+    ADD CONSTRAINT supplied_items_pkey PRIMARY KEY (supply_item_id);
+
+
+--
+-- Name: supplied_items unique_supplied_item; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.supplied_items
+    ADD CONSTRAINT unique_supplied_item UNIQUE (product_code);
+
+
+--
+-- Name: inventory_items fk_inventory_distributor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.inventory_items
+    ADD CONSTRAINT fk_inventory_distributor FOREIGN KEY (distributor_id) REFERENCES public.distributors(distributor_id) ON DELETE CASCADE;
+
+
+--
+-- Name: supplied_items fk_supplied_inventory; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.supplied_items
+    ADD CONSTRAINT fk_supplied_inventory FOREIGN KEY (product_code) REFERENCES public.inventory_items(product_code) ON DELETE RESTRICT;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict eb3Ht7I9B9qRaVocVIqzXJFghfByYtF0Ncnlefa5c1BOiWp3GRbQVehT18BfwEk
+

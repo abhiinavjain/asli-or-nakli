@@ -1,0 +1,8 @@
+# Automatic HTTPS for your domain + one login in front of the whole app
+# (Streamlit has no login of its own).
+{$DOMAIN} {
+	basic_auth {
+		{$SITE_USER} {$SITE_PASSWORD_HASH}
+	}
+	reverse_proxy app:8501
+}

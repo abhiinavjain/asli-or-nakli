@@ -1,0 +1,6 @@
+# Asli-or-Nakli blocking and matching functions.
+# Install the SAME version on the mediator and on every source database.
+comment = 'Asli-or-Nakli: blocking keys and similarity functions for candidate search at the source'
+default_version = '1.0'
+relocatable = false
+schema = asli

@@ -1,0 +1,25 @@
+id,database,table,stored_code,true_code,noise_type,vendor_id,distributor_id,name,manufacturer,mfg,expiry,expected
+V01,vendor_db,vendor_inventory,ITEM0O0041,ITEM000041,OCR look-alike: O for 0,1,1,Ibuprofen 400mg,Sunrise Pharmaceuticals,03/2026,03/2028,AUTO-FIX
+V02,vendor_db,vendor_inventory,1TEM000098,ITEM000098,OCR look-alike: 1 for I,1,2,Aspirin 75mg,HealthPlus Pharma,03/2026,04/2028,AUTO-FIX
+V03,vendor_db,vendor_inventory,ITEM0000B4,ITEM000084,OCR look-alike: B for 8,2,2,Diclofenac 50mg,MediCare Labs,03/2026,MAR-2028,"AUTO-FIX (company abbreviated, expiry in MON-YYYY)"
+V04,vendor_db,vendor_inventory,ITEM00112,ITEM000112,Missing character,1,2,Losartan Potassium 50mg,HealthPlus Pharma,03/2026,04/2028,AUTO-FIX (composition used as name)
+V05,vendor_db,vendor_inventory,ITEM0000165,ITEM000165,Extra character,1,3,Levocetirizine 5mg,NovaMed Pharmaceuticals,04/2026,05/2028,AUTO-FIX
+V06,vendor_db,vendor_inventory,ITEM000193,ITEM000139,Transposed digits -> another REAL code,2,3,Calcium 500mg,LifeWell Laboratories,03/2026,05/2028,FIX NEEDS CONFIRMATION: ITEM000193 exists (Cefixime) but context says Calcium 500mg / LifeWell
+V07,vendor_db,vendor_inventory,ITEM000910,ITEM000190,Transposed digits,2,4,Doxycyclin 100mg,CureLife Pharma,04/2026,6/28,"AUTO-FIX (name misspelt, short expiry)"
+V08,vendor_db,vendor_inventory,item-000202,ITEM000202,Lowercase + separator,2,4,Naproxen 250mg,CureLife Pharma,04/2026,06/2028,AUTO-FIX
+V09,vendor_db,vendor_inventory,ITEM 000248,ITEM000248,Embedded space,2,5,Clopidogrel 75mg,PrimeHealth Pharma,05/2026,07/2028,AUTO-FIX (company suffix differs)
+V10,vendor_db,vendor_inventory,ITRM000107,ITEM000107,Keyboard slip: R next to E,3,2,Metformin 500mg,HealthPlus Pharma,03/2026,04/2028,AUTO-FIX
+V11,vendor_db,vendor_inventory,ITM000174,ITEM000174,Prefix variant,3,3,Rabeprazol 20 mg,NovaMed Pharmaceuticals,04/2026,05/2028,AUTO-FIX (name misspelt)
+V12,vendor_db,vendor_inventory,ITEM214,ITEM000214,Unpadded number,3,4,Glimepiride 2mg,WellCare Laboratories,04/2026,2028-06,AUTO-FIX (expiry in YYYY-MM)
+V13,vendor_db,vendor_inventory,ITЕM000268,ITEM000268,Unicode look-alike: Cyrillic Е for E,3,5,Domperidone 10mg,PrimeHealth Pharmaceuticals,05/2026,08/2028,AUTO-FIX
+V14,vendor_db,vendor_inventory,lTEM0OO183,ITEM000183,"Multiple OCR errors (l, O, O)",4,4,Doxycycline 100mg,Cure Life Pharma,04/2026,06/2028,AUTO-FIX (company spacing)
+V15,vendor_db,vendor_inventory,ITEM000209,ITEM000200,One digit wrong -> another REAL code,4,4,Cefixime 200mg,CureLife Pharma,04/2026,06/2028,FIX NEEDS CONFIRMATION: ITEM000209 exists (Naproxen) but context says Cefixime 200mg
+V16,vendor_db,vendor_inventory,ITEM00017,ITEM000171|ITEM000173|ITEM000178,Last digit lost -> ambiguous,4,3,Rabeprazole 20mg,NovaMed Pharmaceuticals,04/2026,05/2028,"REVIEW: 171, 173, 178 all fit (same medicine, distributor and shop) - must not auto-fix"
+V17,vendor_db,vendor_inventory,ITEM000l06,ITEM000106,Duplicate of existing ITEM000106 row (l for 1),1,2,Metformin 500mg,HealthPlus Pharma,03/2026,04/2028,DUPLICATE: same item already stored as ITEM000106 -> remove this row
+V18,vendor_db,vendor_inventory,ITEM000153,ITEM000153,"Clean code, wrong context (expiry year)",1,3,Montelukast 10mg,NovaMed Pharmaceuticals,04/2026,05/2029,CONTEXT FIX: expiry should be 05/2028
+D01,distributor_db,inventory_items,ITEM0000S0,ITEM000050,OCR look-alike: S for 5,,1,IBUPROFEN 400MG,SUNRISE PHARMACEUTICALS,2026-03-04,2028-03-01,AUTO-FIX
+D02,distributor_db,inventory_items,ITEM0000BB,ITEM000088,OCR look-alike: B for 8 (twice),,2,DICLOFNAC 50MG,MEDICARE LABORATORIES,2026-03-16,2028-03-29,AUTO-FIX (name misspelt)
+D03,distributor_db,inventory_items,ITEM00095,ITEM000095,Missing character,,2,ASPIRIN 75MG,HEALTHPLUS PHARMA,2026-03-19,2028-04-05,AUTO-FIX
+D04,distributor_db,inventory_items,ITEM000816,ITEM000186,Transposed digits,,4,DOXYCYCLINE 100MG,CURELIFE PHARMA,2026-04-15,2028-06-07,AUTO-FIX
+D05,distributor_db,inventory_items,ITEM-000263,ITEM000263,Separator,,5,DOMPERIDONE 10 MG,PRIMEHEALTH PHARMACEUTICALS,2026-05-09,2028-08-02,AUTO-FIX
+D06,distributor_db,inventory_items,ITEM0002B7,ITEM000287,OCR look-alike: B for 8 + mfg/exp swapped,,5,LORATADINE 10MG,GLOBALMEDS INDIA LTD,2028-08-16,2026-05-15,AUTO-FIX code + DATE FIX (mfg and expiry swapped)

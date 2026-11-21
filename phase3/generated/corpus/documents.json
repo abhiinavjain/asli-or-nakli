@@ -1,0 +1,222 @@
+[
+  {
+    "doc_key": "WHO-MPA-2025-02",
+    "doc_type": "REGULATOR_ALERT",
+    "origin": "REAL",
+    "title": "WHO Medical Product Alert N°2/2025: falsified HEALMOXY (amoxicillin) capsules 500mg",
+    "issuer": "World Health Organization",
+    "published_on": "2025-04-23",
+    "url": "https://www.who.int/news/item/23-04-2025-medical-product-alert-n-2-2025--falsified-healmoxy-(amoxicillin)-capsules-500mg",
+    "body": "Summary written for this project. WHO warned about four batches of falsified HEALMOXY amoxicillin 500mg capsules found in Cameroon and the Central African Republic and reported in March 2025. Laboratory analysis found no amoxicillin in the capsules, so they cannot treat bacterial infections and patients may get worse. Signs of falsification included inconsistent manufacturing and expiry date formats printed on the packs. WHO asked health professionals to report lack of efficacy, adverse effects or suspected falsified antibiotics to the national regulator, asked authorities to increase surveillance of supply chains and informal markets, and advised anyone holding these packs not to use them. Batch details are in the annex of the alert."
+  },
+  {
+    "doc_key": "WHO-MPA-2024-04",
+    "doc_type": "REGULATOR_ALERT",
+    "origin": "REAL",
+    "title": "WHO Medical Product Alert N°4/2024: falsified USP/EP propylene glycol",
+    "issuer": "World Health Organization",
+    "published_on": "2024-10-10",
+    "url": "https://www.who.int/news/item/10-10-2024-medical-product-alert-n-4-2024--falsified-usp-ep-propylene-glycol",
+    "body": "Summary written for this project. WHO reported three further falsified batches of propylene glycol, an excipient used in syrups, detected in Pakistan in August 2024. Testing of one batch found ethylene glycol contamination, and diethylene glycol may also be present. The labels named DOW as the manufacturer, but the company confirmed it did not make or supply the material; batch numbers and the certificate of analysis were falsified. Contaminated excipients can cause abdominal pain, vomiting, acute kidney injury and death. WHO advised manufacturers to buy only from approved suppliers, test every incoming batch for ethylene glycol and diethylene glycol, and report suspected cases."
+  },
+  {
+    "doc_key": "CDSCO-ALERT-2025-08",
+    "doc_type": "REGULATOR_ALERT",
+    "origin": "REAL",
+    "title": "CDSCO monthly drug alert, August 2025: 94 not of standard quality, 3 spurious",
+    "issuer": "Central Drugs Standard Control Organisation (reported by Business Standard)",
+    "published_on": "2025-09-19",
+    "url": "https://www.business-standard.com/amp/industry/news/cdsco-spurious-drugs-nsq-august-2025-125091900835_1.html",
+    "body": "Summary written for this project. In its monthly drug alert for August 2025 the Indian regulator CDSCO listed 94 drug samples as not of standard quality (NSQ) and three as spurious. NSQ samples failed quality tests such as assay of the active ingredient, dissolution and uniformity of weight; spurious medicines are made by unauthorised manufacturers using another company's brand name. Spurious samples included Pan D and Pan 40 tablets and a diazepam injection found in Bihar. NSQ products named included paracetamol, pantoprazole and domperidone tablets. The ministry said failures apply only to the tested batches and that spurious cases are investigated under the Drugs and Cosmetics Act."
+  },
+  {
+    "doc_key": "CDSCO-ALERT-2025-11",
+    "doc_type": "REGULATOR_ALERT",
+    "origin": "REAL",
+    "title": "CDSCO monthly drug alert, November 2025: 205 samples not of standard quality",
+    "issuer": "Central Drugs Standard Control Organisation (reported by IANS)",
+    "published_on": "2025-12-19",
+    "url": "https://ianslive.in/cdsco-labs-flag-205-drug-samples-as-not-of-standard-quality-in-november--20251219160347",
+    "body": "Summary written for this project. CDSCO's drug alert for November 2025 listed 205 drug samples as not of standard quality: 64 flagged by central drugs laboratories and 141 by state drug testing laboratories. Two samples from the Ghaziabad area were classed as spurious, meaning an unlicensed maker used a brand name owned by another company. Officials stressed that failures apply only to the batches tested and that the spurious cases are under investigation."
+  },
+  {
+    "doc_key": "MOHFW-H2-2022",
+    "doc_type": "REGULATION",
+    "origin": "REAL",
+    "title": "Schedule H2: barcode or QR code mandatory on 300 drug brands (Drugs (Eighth Amendment) Rules, 2022)",
+    "issuer": "Ministry of Health and Family Welfare (reported by Medical Dialogues)",
+    "published_on": "2022-11-21",
+    "url": "https://medicaldialogues.in/news/industry/pharma/union-health-ministry-notifies-300-drug-brands-under-schedule-h2-details-102657",
+    "body": "Summary written for this project. The Health Ministry amended the Drugs Rules, 1945 and inserted Schedule H2 listing 300 drug formulation brands. From 1 August 2023 their manufacturers must print a barcode or QR code on the primary label, or the secondary label if space is short. The code carries a unique product identification code, generic and brand name, manufacturer name and address, batch number, manufacturing and expiry dates and the manufacturing licence number. Brands listed include Dolo 650, Calpol, Allegra, Augmentin Duo and Saridon. A pack whose batch number or expiry date does not match the code, or a missing code on a listed brand, is a sign of a counterfeit."
+  },
+  {
+    "doc_key": "MOHFW-QR-2026",
+    "doc_type": "REGULATION",
+    "origin": "REAL",
+    "title": "QR traceability extended to vaccines, antimicrobials, anti-cancer and narcotic medicines",
+    "issuer": "Ministry of Health and Family Welfare (reported by Outlook India)",
+    "published_on": "2026-06-26",
+    "url": "https://www.outlookindia.com/healthcare-spotlight/health-ministry-extends-qr-tracking-to-vaccines-cancer-and-antimicrobial-drugs",
+    "body": "Summary written for this project. The Health Ministry amended the Drugs Rules, 1945 to bring vaccines, antimicrobials such as amoxicillin, anti-cancer medicines and narcotic and psychotropic substances under Schedule H2. Their packs must carry a barcode or QR code with a unique product ID, generic and brand names, manufacturer name and address, batch number, manufacturing and expiry dates, manufacturing licence number and excipient details. The vaccine, anti-cancer and narcotic provisions apply from 1 July 2027 and the antimicrobial provisions from 1 July 2028."
+  },
+  {
+    "doc_key": "DAILYMED-IBUPROFEN",
+    "doc_type": "PACKAGE_INSERT",
+    "origin": "REAL",
+    "title": "Ibuprofen tablets USP (film-coated) — prescribing information",
+    "issuer": "DailyMed, U.S. National Library of Medicine",
+    "published_on": "2026-04-13",
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=886c974c-0d32-4a1b-8f54-40c2c12efa45",
+    "body": "Summary written for this project. Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) available as 400 mg, 600 mg and 800 mg film-coated tablets, used for mild to moderate pain, primary dysmenorrhoea, rheumatoid arthritis and osteoarthritis. Boxed warnings: serious cardiovascular thrombotic events and serious gastrointestinal bleeding, ulceration and perforation. Genuine tablets are uniform, film-coated and carry an imprint; they should not be crumbly or discoloured. Store at 20 to 25 °C and avoid excessive heat above 40 °C. Lack of pain relief or tablets that look different from the usual product should be reported."
+  },
+  {
+    "doc_key": "DAILYMED-AMOXICILLIN",
+    "doc_type": "PACKAGE_INSERT",
+    "origin": "REAL",
+    "title": "Amoxicillin capsules USP 250 mg / 500 mg — prescribing information",
+    "issuer": "DailyMed, U.S. National Library of Medicine",
+    "published_on": "2025-12-22",
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5002cce4-0abc-4446-888c-47396549d4da",
+    "body": "Summary written for this project. Amoxicillin is a penicillin-class antibacterial for ear, nose and throat, genitourinary, skin and lower respiratory tract infections and, with other drugs, H. pylori. Warnings include serious hypersensitivity reactions and Clostridioides difficile associated diarrhoea. The 500 mg capsule is a size 0 hard gelatin capsule containing white to off-white powder. Store at 20 to 25 °C in a tight, light-resistant container. Capsules exposed to heat or humidity can soften, stick together and fail dissolution, so stock that went through a temperature excursion should be quarantined and assessed."
+  },
+  {
+    "doc_key": "NEWS-DELHI-FAKE-2025",
+    "doc_type": "NEWS",
+    "origin": "REAL",
+    "title": "Delhi Police bust interstate counterfeit medicine racket; fake Ultracet and Augmentin seized",
+    "issuer": "Medical Dialogues",
+    "published_on": "2025-08-17",
+    "url": "https://medicaldialogues.in/news/industry/pharma/delhi-police-cracks-fake-drug-network-counterfeit-ultracet-augmentin-seized-6-held-153567",
+    "body": "Summary written for this project. Delhi Police Crime Branch stopped a vehicle in Civil Lines and found counterfeit Ultracet and Augmentin 625 tablets; the brand owners confirmed the packaging was fake and laboratory tests agreed. Raids on illegal units in Jind (Haryana) and Baddi (Himachal Pradesh) seized more than 1.1 lakh counterfeit tablets and capsules with packaging machinery. The gang copied brand labels and supplied stock to Delhi, Uttar Pradesh, Haryana and Himachal Pradesh, partly through social media. Six people were arrested."
+  },
+  {
+    "doc_key": "DEMO-ALERT-2026-10",
+    "doc_type": "REGULATOR_ALERT",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] State drug alert October 2026: batches not of standard quality",
+    "issuer": "Demo State Drugs Testing Laboratory (fictional, project data)",
+    "published_on": "2026-10-28",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Samples drawn from retail pharmacies in New Delhi in September 2026 were tested. Ibuprofen 400mg tablets, batch SUN-MED005-2603, manufacturer Sunrise Pharmaceuticals, Unit 2 Baddi: NOT OF STANDARD QUALITY, assay 87.9 % of label claim against 95–105 %. Sample drawn from a pharmacy in Karol Bagh. Pantoprazole 40mg, batch MED-MED007-2603, MediCare Laboratories: of standard quality. Telmisartan 40mg, batch PRI-MED026-2605, PrimeHealth Pharmaceuticals: of standard quality. Retailers holding the failed batch should stop sale and return stock through their distributor."
+  },
+  {
+    "doc_key": "DEMO-INSPECTION-SUN-U2",
+    "doc_type": "INSPECTION_REPORT",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] GMP inspection summary: Sunrise Pharmaceuticals Unit 2, Baddi",
+    "issuer": "Demo Drugs Control Department (fictional, project data)",
+    "published_on": "2026-08-14",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Unit 2 of Sunrise Pharmaceuticals at Baddi was inspected in August 2026. The GMP certificate GMP/SUN/U2 lapsed on 30 June 2026 and renewal had not been applied for, yet the unit continued to release batches of ibuprofen 400mg and amoxicillin 500mg capsules. Observations: humidity in the encapsulation room above 65 % RH without corrective action; out-of-specification assay results for an ibuprofen batch closed by retesting without a confirmed root cause; incomplete reconciliation of printed foil and carton stock. The unit was directed to stop release until the certificate is renewed."
+  },
+  {
+    "doc_key": "DEMO-RECALL-SUN-AMOX",
+    "doc_type": "RECALL_NOTICE",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Voluntary recall: Amoxicillin 500mg capsules, batch SUN-MED004-2603",
+    "issuer": "Sunrise Pharmaceuticals (fictional notice, project data)",
+    "published_on": "2026-09-20",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Sunrise Pharmaceuticals is recalling Amoxicillin 500mg capsules, batch SUN-MED004-2603, from distributors and pharmacies because stability testing showed dissolution below specification. Capsules may appear sticky or softened. Pharmacies should quarantine remaining stock and return it through their distributor. Patients who did not improve should consult their doctor."
+  },
+  {
+    "doc_key": "DEMO-PV-IBU-2026",
+    "doc_type": "PHARMACOVIGILANCE",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Pharmacovigilance signal: lack of efficacy of ibuprofen 400mg, Karol Bagh",
+    "issuer": "Demo Adverse Drug Reaction Monitoring Centre (fictional, project data)",
+    "published_on": "2026-11-08",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Three reports in November 2026 describe ibuprofen 400mg tablets bought in the Karol Bagh area that did not relieve pain. Reporters describe crumbly, slightly yellow tablets, blurred foil printing, no hologram, and a batch number sticker covering another number. Two packs were bought at CityCare Medical Store. The pattern suggests either a substandard batch or counterfeit packs entering the local supply chain; samples were requested for testing."
+  },
+  {
+    "doc_key": "DEMO-NEWS-KAROLBAGH",
+    "doc_type": "NEWS",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Fake painkiller strips with blurred foil found in Karol Bagh, drug officers say",
+    "issuer": "Demo City News (fictional, project data)",
+    "published_on": "2026-11-12",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Drug control officers seized strips of a painkiller labelled as Sunrise Pharmaceuticals Ibuprofen 400mg from a godown near Karol Bagh. Officers said the cartons were re-sealed and batch stickers pasted over the original print, and that some cartons appeared to have been opened during transport and repacked. A distributor's delivery van was questioned. Buyers are advised to check the QR code and batch number with the manufacturer."
+  },
+  {
+    "doc_key": "DEMO-COLDCHAIN-ADVISORY",
+    "doc_type": "ADVISORY",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Heatwave advisory for medicine transport in Delhi-NCR",
+    "issuer": "Demo Chemists and Distributors Association (fictional, project data)",
+    "published_on": "2026-09-05",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. During the September heatwave several delivery vehicles recorded cargo temperatures above 30 °C after air-conditioning failures. Products labelled store below 25 °C, including amoxicillin capsules, must be quarantined after an excursion and the manufacturer consulted before sale. Distributors should log every excursion and inform the receiving pharmacy. Delhi Pharma Distributors reported one such excursion on 2 September 2026."
+  },
+  {
+    "doc_key": "DEMO-FORUM-AMOX",
+    "doc_type": "CONSUMER_REVIEW",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Consumer forum: amoxicillin capsules stuck together",
+    "issuer": "Demo consumer forum (fictional, project data)",
+    "published_on": "2026-09-14",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. A user wrote that amoxicillin 500mg capsules bought in Dwarka were sticky and stuck together inside the strip, and that two had leaked powder. The pharmacy replaced the strip. Other users replied that heat during transport can soften gelatin capsules."
+  },
+  {
+    "doc_key": "DEMO-CLONED-CODE",
+    "doc_type": "PHARMACOVIGILANCE",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Pharmacist report: genuine metformin item code printed on an amoxicillin pack",
+    "issuer": "Demo Pharmacy Council bulletin (fictional, project data)",
+    "published_on": "2026-10-20",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. A pharmacist found an amoxicillin 500mg pack whose item code ITEM000106 belongs, in the manufacturer's records, to Metformin 500mg by HealthPlus Pharma. Copying a valid code onto a fake pack is a known counterfeiting method: the code verifies as genuine, but the medicine name and expiry on the pack do not match the record."
+  },
+  {
+    "doc_key": "DEMO-EXPIRED-CETIRIZINE",
+    "doc_type": "INSPECTION_REPORT",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Retail inspection: expired cetirizine still on shelves",
+    "issuer": "Demo Drugs Control Department (fictional, project data)",
+    "published_on": "2026-07-15",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Inspectors found Cetirizine 10mg tablets from ABC Pharma Ltd with expiry June 2026 on sale in two pharmacies. Expired stock must be segregated and returned. No quality failure was found in unexpired batches."
+  },
+  {
+    "doc_key": "DEMO-METFORMIN-SHORTAGE",
+    "doc_type": "NEWS",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Short supply of metformin 500mg in south Delhi pharmacies",
+    "issuer": "Demo City News (fictional, project data)",
+    "published_on": "2026-10-16",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Several pharmacies reported that Metformin 500mg from HealthPlus Pharma was out of stock for a few days because of a delayed shipment. Pharmacists suggested other brands. No quality concern was reported."
+  },
+  {
+    "doc_key": "DEMO-ATORVA-PRICE",
+    "doc_type": "NEWS",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Revised ceiling price for atorvastatin 10mg",
+    "issuer": "Demo pricing bulletin (fictional, project data)",
+    "published_on": "2026-08-01",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. The ceiling price of Atorvastatin 10mg tablets, including the WellCare Laboratories brand, was revised. Pharmacies should update their price labels. This notice concerns pricing only."
+  },
+  {
+    "doc_key": "DEMO-ORS-CAMPAIGN",
+    "doc_type": "ADVISORY",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] Summer ORS awareness campaign",
+    "issuer": "Demo health department (fictional, project data)",
+    "published_on": "2026-05-20",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. Pharmacies are asked to stock ORS Powder from GlobalMeds India Ltd and other makers ahead of summer and to explain correct preparation to customers. There is no quality concern about any ORS batch."
+  },
+  {
+    "doc_key": "DEMO-MEDSUPPLY-WAREHOUSE",
+    "doc_type": "CIRCULAR",
+    "origin": "SYNTHETIC",
+    "title": "[Demo] MedSupply India moves its Lajpat Nagar warehouse",
+    "issuer": "MedSupply India (fictional circular, project data)",
+    "published_on": "2026-09-30",
+    "url": null,
+    "body": "Fictional document for the Asli-or-Nakli demo. MedSupply India informs its retail partners that the Lajpat Nagar warehouse moves to a new site with a cold room from October 2026. Deliveries continue without interruption and the drug licence number stays the same."
+  }
+]

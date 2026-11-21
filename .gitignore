@@ -1,0 +1,16 @@
+# secrets: never commit
+deploy/.env
+*.env
+!deploy/.env.example
+
+# database dumps: real data, large, restored at deploy time
+deploy/dumps/*.dump
+deploy/dumps/*.sql
+
+# python / editor noise
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
+*.swp

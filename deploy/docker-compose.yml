@@ -1,0 +1,76 @@
+# Asli-or-Nakli — whole system on one server.
+# 4 PostgreSQL containers (still 4 separate servers talking over dblink/postgres_fdw),
+# the Streamlit GUI, and Caddy in front for HTTPS + a password.
+# Usage: see deploy/README.md
+
+x-db: &db
+  build:
+    context: ..
+    dockerfile: deploy/db/Dockerfile
+    args:
+      PG_MAJOR: ${PG_MAJOR:-16}
+  restart: unless-stopped
+  volumes:
+    - ./dumps:/dumps:ro
+  healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U postgres"]
+    interval: 5s
+    retries: 20
+
+services:
+  manufacturer:
+    <<: *db
+    environment: { POSTGRES_PASSWORD: "${PG_PASSWORD}", POSTGRES_DB: manuf_db }
+    volumes: [ "./dumps:/dumps:ro", "manufacturer_data:/var/lib/postgresql" ]
+
+  distributor:
+    <<: *db
+    environment: { POSTGRES_PASSWORD: "${PG_PASSWORD}", POSTGRES_DB: distributor_db }
+    volumes: [ "./dumps:/dumps:ro", "distributor_data:/var/lib/postgresql" ]
+
+  vendor:
+    <<: *db
+    environment: { POSTGRES_PASSWORD: "${PG_PASSWORD}", POSTGRES_DB: vendor_db }
+    volumes: [ "./dumps:/dumps:ro", "vendor_data:/var/lib/postgresql" ]
+
+  mediator:
+    <<: *db
+    environment: { POSTGRES_PASSWORD: "${PG_PASSWORD}", POSTGRES_DB: mediator_db }
+    volumes: [ "./dumps:/dumps:ro", "./repoint.sql:/repoint.sql:ro", "mediator_data:/var/lib/postgresql" ]
+    depends_on:
+      manufacturer: { condition: service_healthy }
+      distributor:  { condition: service_healthy }
+      vendor:       { condition: service_healthy }
+
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/app/Dockerfile
+    restart: unless-stopped
+    environment:
+      ASLI_DB_HOST: mediator
+      ASLI_DB_PASSWORD: "${PG_PASSWORD}"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:-}"
+    depends_on:
+      mediator: { condition: service_healthy }
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports: [ "80:80", "443:443" ]
+    environment:
+      DOMAIN: "${DOMAIN}"
+      SITE_USER: "${SITE_USER}"
+      SITE_PASSWORD_HASH: "${SITE_PASSWORD_HASH}"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on: [ app ]
+
+# No database port is published: only Caddy (80/443) is reachable from outside.
+volumes:
+  manufacturer_data:
+  distributor_data:
+  vendor_data:
+  mediator_data:
+  caddy_data:
